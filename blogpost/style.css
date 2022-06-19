@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Outfit:wght@300;400;600&display=swap');
+
+* {
+   
+    margin: 0;
+}
+
+body{
+    font-family: 'News Cycle', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-linkedin {
+      background: #007bb5;
+      color: white;
+  }
+  .fa-instagram {
+      background:#125688;
+      color: white;
+  }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 75px 40vh 40vh 80px;
+    grid-template-areas: "header navbar"
+                         "image about"
+                         "other other"
+                         "footer footer"
+}
+
+.header{
+    grid-area: header;
+    background-color: wheat;
+    justify-content: center;
+}
+.navbar{
+    padding: 10px;
+    grid-area: navbar;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: wheat;
+}
+.image{
+    grid-area: image;
+    background-color: wheat;
+}
+.about{
+    grid-area: about;
+    background-color: wheat;
+}
+.other{
+    grid-area: other;
+    background-color: wheat;
+}
+.footer{
+    grid-area: footer;
+    background-color: wheat;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.title{
+    color: blue;
+}
+.heading{
+    color: red;
+}
+.bold{
+    font-weight: bolder;
+    color: black;
+}
+
+/*mobile view*/
+@media screen and (max-width: 500px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header"
+                             "navbar"
+                             "image"
+                             "about"
+                             "other"
+                             "footer"
+    }
+    .navbar{
+        padding: 10px;
+        grid-area: navbar;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        background-color: wheat;
+    }
+    .socials{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    
+    }
+
+}
