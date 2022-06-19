@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
-@import "blogpostStyles/blogPost";
-@import "blogpostStyles/socialIcon";
+@import url("blogpostStyles/blogPost.css");
+@import url("blogpostStyles/socialIcon.css");
 
 * {
     margin: 0;
@@ -91,14 +91,14 @@ li{
 }
 
 /*mobile view*/
-@media screen and (max-width: 500px){
+@media screen and (min-width: 500px){
     .container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(6, auto);
         grid-template-areas: "header"
-                             "navbar"
-                             "image"
+                             "navbar" 
+                             "image" 
                              "about"
                              "other"
                              "footer"
@@ -119,3 +119,63 @@ li{
     }
 
 }
+
+/*mobile medium view*/
+@media screen and (min-width: 700px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header navbar"
+                             "image about"
+                             "other other"
+                             "footer footer"
+                            
+    }
+    .navbar{
+        padding: 10px;
+        grid-area: navbar;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        background-color: wheat;
+    }
+    .socials{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+
+}
+/*mobile medium view*/
+@media screen and (max-width: 499px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header" 
+                             "navbar"
+                             "image" 
+                             "about"
+                             "other" 
+                             "footer"
+                            
+    }
+    .navbar{
+        padding: 10px;
+        grid-area: navbar;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        background-color: wheat;
+    }
+    .socials{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+
+}
+
